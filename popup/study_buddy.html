@@ -10,40 +10,40 @@
         <form>
             <div id = "icons" align = "center">
                 <span class="icon-container">
-                    <img src = "../socials/fb.png">
-                    <input type="checkbox" value="fb" align = "center">
+                    <label for = "fb"><img src = "../socials/fb.png"></label>
+                    <input name = "social" type="checkbox" id = "fb" value="fb">
                 </span> 
 
                <span class = "icon-container">
-                   <img src = "../socials/instagram.png">
-                    <input type="checkbox" value="ig">  
+                   <label for="ig"><img src = "../socials/instagram.png"></label>
+                    <input name = "social" type="checkbox" id = "ig" value="ig">  
                 </span> 
 
                 <span class = "icon-container">
-                    <img src = "../socials/reddit.png">
-                    <input type="checkbox" value="rd"> 
+                    <label for = "rd"><img src = "../socials/reddit.png"></label>
+                    <input name = "social" type="checkbox" id = "rd" value="rd"> 
                 </span>
 
                 <span class="icon-container">
-                    <img src = "../socials/twitter.png">
-                    <input type="checkbox" value="tw"> 
-                </span>
-
-                <span class="icon-container">
-                    <img src = "../socials/youtube.png">
-                    <input type="checkbox" value="yt">
+                    <label for="tw"><img src = "../socials/twitter.png"></label>
+                    <input name = "social" type="checkbox" id = "tw" value="tw"> 
                 </span>
                 <span class="icon-container">
-                    <img src = "../socials/amazon.png">
-                    <input type="checkbox" value="az">
+                    <label for = "yt"><img src = "../socials/youtube.png"></label>
+                    <input name = "social" type="checkbox" id = "yt" value="yt">
+                </span>
+                <span class="icon-container">
+                    <label for = "az"><img src = "../socials/amazon.png"></label>
+                    <input name = "social" type="checkbox" id = "az" value="az">
                 </span>
                 <img id = "plus" src = "../socials/add.png"> 
             </div>
             <div id = "other-site">
-                <label>Other Site</label>
+                <label>New Site</label>
                 <input id = "other" type="text" placeholder="https://google.com">
-                <button id = "add-site">Add</button>
+                <button class="social-button" id = "add-site">Add</button>
             </div>
+            <button class="social-button" id = "study" type="submit">Study!</button>
         </form>
         <script src = "study_buddy.js"></script>
     </body>

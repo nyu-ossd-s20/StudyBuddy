@@ -20,9 +20,5 @@
     "default_popup": "popup/study_buddy.html"
     },
 
-    "web_accessible_resources": [
-
-    ]
-
+    "web_accessible_resources": []
 }
-// 
