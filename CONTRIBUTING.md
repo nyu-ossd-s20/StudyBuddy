@@ -1,2 +1,2 @@
-# Contributers
+# Contributors
 

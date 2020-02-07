@@ -1,0 +1,63 @@
+html, body {
+    width: 150px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+#icons img {
+    width: 40px;
+    height: 40px;
+    margin: 10px 5px;
+}
+
+#icons img:hover {
+    transform: scale(1.2); 
+}
+
+#icons img:active {
+    opacity: .8;
+}
+
+#other {
+    width: 100px;
+    border-radius: 5px;
+    border-color: black;
+    padding: 5px;
+    text-align: center;
+    color: grey;
+    margin: 10px 0;
+}
+
+#add-site {
+    font-family: 'Montserrat', sans-serif;
+    background-color: black; 
+    color: white;
+    border: none;
+    width: 50px;
+    height: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#add-site:hover,#icons img:hover  {
+    cursor: pointer;
+}
+
+#add-site:active {
+    opacity: .8;
+}
+
+.icon-container {
+    display: inline-block;
+    width: 60px;
+}
+
+#other-site {
+    display: none;
+}
+
+#heading {
+    font-size: 1.5em;
+    padding: 5px;
+}

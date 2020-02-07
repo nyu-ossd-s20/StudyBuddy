@@ -1,0 +1,28 @@
+{
+
+    "manifest_version": 2,
+    "name": "StudyBuddy",
+    "version": "1.0",
+
+    "description": "Ever tried to study but you keep getting distracted by Facebook, Youtube, or Reddit? StudyBuddy helps you not fail by blocking access to sites that distract you from studying.",
+    "homepage_url": "https://github.com/nyu-ossd-s20/StudyBuddy",
+    "icons": {
+    "48": "icons/beasts-48.png"
+    },
+
+    "permissions": [
+    "activeTab"
+    ],
+
+    "browser_action": {
+    "default_icon": "icons/beasts-32.png",
+    "default_title": "StudyBuddy",
+    "default_popup": "popup/study_buddy.html"
+    },
+
+    "web_accessible_resources": [
+
+    ]
+
+}
+// 
