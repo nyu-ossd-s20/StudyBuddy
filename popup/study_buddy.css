@@ -3,6 +3,7 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     text-align: center;
+    color: #260065;
 }
 
 #icons img {
@@ -19,14 +20,19 @@ html, body {
     opacity: .8;
 }
 
-#other {
-    width: 100px;
+#time, #other {
+    margin: 10px auto;
     border-radius: 5px;
-    border-color: black;
-    padding: 5px;
-    text-align: center;
     color: grey;
-    margin: 10px 0;
+    border-color: #aea397;
+    padding: 5px;
+}
+#time {
+    display: block;
+}
+
+#other{
+    width: 100px;
 }
 
 #add-site {
@@ -47,10 +53,6 @@ html, body {
     width: 60px;
 }
 
-#other-site {
-    display: none;
-}
-
 #heading {
     font-size: 1.5em;
     padding: 5px;
@@ -58,15 +60,27 @@ html, body {
 
 .social-button {
     font-family: 'Montserrat', sans-serif;
-    background-color: black; 
-    color: white;
     border: none;
     margin-bottom: 10px;
     border-radius: 5px;
 }
 
+#add-site {
+    background-color: #260065;
+    color: white;
+}
+
 #study {
     width: 80px;
     height: 30px;
-    font-size: 18px;
+    font-size: 16px;
+    border: 2px #462085 solid;
+    color: #462085;
+}
+
+.hide {
+    display: none;
+}
+.show{
+    display: block;
 }
