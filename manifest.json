@@ -11,14 +11,21 @@
     },
 
     "permissions": [
-    "activeTab"
+        "activeTab",
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>"
     ],
 
     "browser_action": {
-    "default_icon": "icons/beasts-32.png",
-    "default_title": "StudyBuddy",
-    "default_popup": "popup/study_buddy.html"
+        "default_icon": "icons/beasts-32.png",
+        "default_title": "StudyBuddy",
+        "default_popup": "popup/study_buddy.html"
     },
 
-    "web_accessible_resources": []
+    "web_accessible_resources": [],
+    "background": {
+        "scripts": ["./popup/study_buddy.js"]
+    }
 }
