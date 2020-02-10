@@ -35,6 +35,7 @@ addButton.addEventListener("click", function(e){
 })
 
 studyButton.addEventListener("click", async (e) => {
+    e.preventDefault();
     const storageObject = await browser.storage.local.get(statusKey);
     const isActive = storageObject[statusKey]
     if (isActive === false) {
@@ -106,15 +107,14 @@ const init = async () => {
     }
 }
 
+const blocker = (req) => {
+    console.log(req);
+    return {cancel: true};
+}
+
 browser.webRequest.onBeforeRequest.addListener(
-    (req) => {
-        console.log(req)
-        return { 
-            redirectUrl: "google.com"
-        };
-    },
-    { urls: ["<all_urls>"] },
+    blocker, 
+    {urls:['<all_urls>']}, 
     ['blocking']
 );
-
 document.addEventListener('DOMContentLoaded', init);
