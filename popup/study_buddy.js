@@ -2,7 +2,7 @@ var addPicButton = document.getElementById("plus");
 var otherField = document.getElementById("other-site");
 
 var addButton = document.getElementById("add-site");
-var studyButton = document.getElementById("study");
+var studyButton = document.getElementById("study-button");
 
 const socialInputs = document.getElementsByName('social');
 
@@ -40,9 +40,11 @@ studyButton.addEventListener("click", async (e) => {
     const isActive = storageObject[statusKey]
     if (isActive === false) {
         browser.storage.local.set({[statusKey]:true});
+        studyButton.setAttribute("active", true);
         studyButton.innerText = "Stop!";
     } else {
         browser.storage.local.set({[statusKey]:false});
+        studyButton.setAttribute("active", false);
         studyButton.innerText = "Study!";
     }
 });

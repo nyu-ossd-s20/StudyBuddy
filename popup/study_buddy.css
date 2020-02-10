@@ -70,12 +70,20 @@ html, body {
     color: white;
 }
 
-#study {
+.study-button {
     width: 80px;
     height: 30px;
     font-size: 16px;
     border: 2px #462085 solid;
     color: #462085;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.study-button[active=true] {
+   border: 2px #e83a0e solid;
+   color: #e83a0e; 
 }
 
 .hide {
