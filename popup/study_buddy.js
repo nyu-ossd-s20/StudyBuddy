@@ -102,8 +102,9 @@ const init = async () => {
         browser.storage.local.set({[blockedSitesKey]: new Set()});
     }
 
-    if (statusKey in storageObject) {
-        
+    if (storageObject[statusKey]) {
+        studyButton.setAttribute("active", true);
+        studyButton.innerText = "Stop!";
     } else {
         browser.storage.local.set({[statusKey]:false});
     }
