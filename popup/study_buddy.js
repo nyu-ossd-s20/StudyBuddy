@@ -62,7 +62,7 @@ studyButton.addEventListener("click", async (e) => {
   if (isActive === false) {
     browser.storage.local.set({[statusKey]:true});
     studyButton.setAttribute("active", true);
-    // TODO: do the thing here
+    // update set in background.js
       getSites();
       storeBlocked();
     studyButton.innerText = "Stop!";
