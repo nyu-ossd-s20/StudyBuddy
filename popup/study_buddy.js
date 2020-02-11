@@ -1,4 +1,3 @@
-
 var addPicButton = document.getElementById("plus");
 var otherField = document.getElementById("other-site");
 
@@ -33,7 +32,6 @@ addPicButton.addEventListener("click",function() {
 
 addButton.addEventListener("click", function(e){
     e.preventDefault();
-
     // validate input url
     var newUrl =  otherInputField.value;
 
@@ -66,6 +64,9 @@ studyButton.addEventListener("click", async (e) => {
   } else {
       browser.storage.local.set({[statusKey]:false});
       studyButton.setAttribute("active", false);
+      // clear set
+      blockedList.clear();
+      storeBlocked();
       studyButton.innerText = "Study!";
   }
 });
@@ -144,7 +145,8 @@ const getSites = async () => {
 // updates blocked list in background.js
 function storeBlocked() {
     let siteList = blockedList;
-//    console.log(siteList);
+    console.log("sites");
+   console.log(siteList);
     browser.storage.local.set({
         siteList
     });
