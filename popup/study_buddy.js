@@ -73,7 +73,6 @@ studyButton.addEventListener("click", async (e) => {
   }
 });
 
-
 for (elem of socialInputs) {
   elem.addEventListener("click", (e) => {
       const site = siteMappings[e.target.value];
@@ -92,6 +91,7 @@ function hide() {
   otherField.classList.remove("show");
   otherField.classList.add("hide");
   addPicButton.src = "../socials/add.png";
+  otherInputField.value = "";
 }
 
 // shows the "new site" input field
