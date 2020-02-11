@@ -36,7 +36,7 @@ addButton.addEventListener("click", function(e){
 
     // validate input url
     var newUrl =  otherInputField.value;
-    
+
     if(isUrlValid(newUrl)) {
         // make a list of new sites
         var newSiteList = document.getElementById("new-sites");
@@ -47,10 +47,9 @@ addButton.addEventListener("click", function(e){
         document.getElementById("new-sites").classList.remove("hide");
         document.getElementById("new-sites").classList.add("show");
         hide();
-        
         // add to set
         addBlockedSite(newUrl);
-        
+
     } else { otherInputField.style.borderColor = "red"; }
 })
 
@@ -62,7 +61,7 @@ studyButton.addEventListener("click", async (e) => {
   if (isActive === false) {
     browser.storage.local.set({[statusKey]:true});
     studyButton.setAttribute("active", true);
-    // update set in background.js
+
       getSites();
       storeBlocked();
     studyButton.innerText = "Stop!";
@@ -72,6 +71,7 @@ studyButton.addEventListener("click", async (e) => {
       studyButton.innerText = "Study!";
   }
 });
+
 
 for (elem of socialInputs) {
   elem.addEventListener("click", (e) => {
@@ -92,6 +92,7 @@ function hide() {
   otherField.classList.add("hide");
   addPicButton.src = "../socials/add.png";
   otherInputField.value = "";
+  otherInputField.style.borderColor = "#aea397";
 }
 
 // shows the "new site" input field
