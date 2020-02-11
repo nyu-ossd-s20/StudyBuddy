@@ -2,7 +2,7 @@ var addPicButton = document.getElementById("plus");
 var otherField = document.getElementById("other-site");
 
 var addButton = document.getElementById("add-site");
-var studyButton = document.getElementById("study");
+var studyButton = document.getElementById("study-button");
 
 const socialInputs = document.getElementsByName('social');
 
@@ -35,13 +35,16 @@ addButton.addEventListener("click", function(e){
 })
 
 studyButton.addEventListener("click", async (e) => {
+    e.preventDefault();
     const storageObject = await browser.storage.local.get(statusKey);
     const isActive = storageObject[statusKey]
     if (isActive === false) {
         browser.storage.local.set({[statusKey]:true});
+        studyButton.setAttribute("active", true);
         studyButton.innerText = "Stop!";
     } else {
         browser.storage.local.set({[statusKey]:false});
+        studyButton.setAttribute("active", false);
         studyButton.innerText = "Study!";
     }
 });
@@ -99,22 +102,22 @@ const init = async () => {
         browser.storage.local.set({[blockedSitesKey]: new Set()});
     }
 
-    if (statusKey in storageObject) {
-        
+    if (storageObject[statusKey]) {
+        studyButton.setAttribute("active", true);
+        studyButton.innerText = "Stop!";
     } else {
         browser.storage.local.set({[statusKey]:false});
     }
 }
 
+const blocker = (req) => {
+    console.log(req);
+    return {cancel: true};
+}
+
 browser.webRequest.onBeforeRequest.addListener(
-    (req) => {
-        console.log(req)
-        return { 
-            redirectUrl: "google.com"
-        };
-    },
-    { urls: ["<all_urls>"] },
+    blocker, 
+    {urls:['<all_urls>']}, 
     ['blocking']
 );
-
 document.addEventListener('DOMContentLoaded', init);
