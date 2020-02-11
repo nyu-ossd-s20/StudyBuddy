@@ -61,9 +61,7 @@ studyButton.addEventListener("click", async (e) => {
   if (isActive === false) {
     browser.storage.local.set({[statusKey]:true});
     studyButton.setAttribute("active", true);
-
-      getSites();
-      storeBlocked();
+    getSites();
     studyButton.innerText = "Stop!";
   } else {
       browser.storage.local.set({[statusKey]:false});
@@ -140,11 +138,13 @@ const init = async () => {
 const getSites = async () => {
     var siteList = await browser.storage.local.get(blockedSitesKey);
     blockedList = siteList[blockedSitesKey];
+    storeBlocked();
 }
 
 // updates blocked list in background.js
 function storeBlocked() {
     let siteList = blockedList;
+//    console.log(siteList);
     browser.storage.local.set({
         siteList
     });
