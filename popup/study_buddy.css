@@ -13,22 +13,19 @@ html, body {
 }
 
 #icons img:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
 
 #icons img:active {
     opacity: .8;
 }
 
-#time, #other {
+#other {
     margin: 10px auto;
     border-radius: 5px;
     color: grey;
     border-color: #aea397;
     padding: 5px;
-}
-#time {
-    display: block;
 }
 
 #other{
@@ -83,7 +80,15 @@ html, body {
 
 .study-button[active=true] {
    border: 2px #e83a0e solid;
-   color: #e83a0e; 
+   color: #e83a0e;
+}
+
+#study-button {
+    cursor: pointer;
+}
+#new-sites {
+    list-style: none;
+    padding: 5px 0;
 }
 
 .hide {

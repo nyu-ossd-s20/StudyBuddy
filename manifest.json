@@ -24,8 +24,7 @@
         "default_popup": "popup/study_buddy.html"
     },
 
-    "web_accessible_resources": [],
     "background": {
-        "scripts": ["./popup/study_buddy.js"]
+        "scripts": ["background.js"]
     }
 }
