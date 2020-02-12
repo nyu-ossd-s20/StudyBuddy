@@ -7,7 +7,7 @@
     "description": "Ever tried to study but you keep getting distracted by Facebook, Youtube, or Reddit? StudyBuddy helps you not fail by blocking access to sites that distract you from studying.",
     "homepage_url": "https://github.com/nyu-ossd-s20/StudyBuddy",
     "icons": {
-    "48": "icons/sb_icon.svg"
+      "48": "icons/sb_icon.svg"
     },
 
     "permissions": [
@@ -24,8 +24,7 @@
         "default_popup": "popup/study_buddy.html"
     },
 
-    "web_accessible_resources": [],
     "background": {
-        "scripts": ["./popup/study_buddy.js"]
+        "scripts": ["background.js"]
     }
 }
