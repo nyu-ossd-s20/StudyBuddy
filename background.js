@@ -32,6 +32,8 @@ function handleRequest(details) {
     if (blocked.has(url.hostname)) {
         console.log("BLOCKED");
 //        console.log(blocked);
-        return {cancel: true};
+//         return {cancel: true};
+        return {redirectUrl: browser.extension.getURL("redirect/redirect.html")};
+
     }
 }
