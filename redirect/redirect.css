@@ -1,0 +1,16 @@
+html, body {
+    width: 1920px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #260065;
+}
+
+#heading {
+    font-size: 3.5em;
+    padding: 5px;
+}
+#heading2 {
+    font-size: 1.0em;
+    padding: 5px;
+}
