@@ -23,6 +23,7 @@
         "default_title": "StudyBuddy",
         "default_popup": "popup/study_buddy.html"
     },
+    "web_accessible_resources": [ "redirect/redirect.html", "redirect/redirect.css"],
 
     "background": {
         "scripts": ["background.js"]
