@@ -1,4 +1,4 @@
-If you want to contribute, make a pull request
+If you want to contribute, please make a pull request or post an issue.
 
 Planned features:
 1. Blocking websites for a time range.
