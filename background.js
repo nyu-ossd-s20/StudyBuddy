@@ -32,7 +32,7 @@ const handleRequest = async (details) => {
         console.log("BLOCKED");
 //        console.log(blocked);
         return {
-            redirectUrl: browser.runtime.getURL('/redirect/redirect.html')
+            redirectUrl: browser.extension.getURL('/redirect/redirect.html')
         }
     }
 }
