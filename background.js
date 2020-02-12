@@ -25,10 +25,10 @@ browser.storage.onChanged.addListener(changeData => {
 
 const handleRequest = async (details) => {
     // Read the web address of the page to be visited 
-    const storageObject = await browser.storage.local.get(blockedSitesKey);
+    const storageObject = await browser.storage.local.get([blockedSitesKey, statusKey]);
     const blockedSites = storageObject[blockedSitesKey]
     const url = new URL(details.url);
-    if (blockedSites.has(url.hostname)) {
+    if (storageObject[statusKey] === true && blockedSites.has(url.hostname)) {
         console.log("BLOCKED");
 //        console.log(blocked);
         return {
